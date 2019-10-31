@@ -13,3 +13,7 @@ RUN apt-get update && \
     apt-get -q clean && \
     rm -rf /var/lib/apt/lists 
 
+# Add the horizon cli
+copy horizon-cli_2.23.29~ppa~ubuntu.bionic_amd64.deb ./
+RUN dpkg -i horizon-cli_2.23.29~ppa~ubuntu.bionic_amd64.deb
+
